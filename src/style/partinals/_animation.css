@@ -1,0 +1,35 @@
+@keyframes slideInLeft{
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@for $i from 1 through 3{
+    &:nth-child($i){
+        animation-delay: #($i * .1)s;
+    }
+}
+@keyframes popOut {
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes slideInRight {
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
